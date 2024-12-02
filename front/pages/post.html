@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Proyecto</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Proyectos Colaborativos</div>
+        <nav class="navbar">
+            <a href="home.html">Inicio</a>
+            <a href="explore.html">Explorar Proyectos</a>
+            <a href="profile.html">Perfil</a>
+            <a href="post.html" class="active">Publicar Proyecto</a>
+        </nav>
+    </header>
+
+    <section class="publish">
+        <h2>Publica un Nuevo Proyecto</h2>
+        <form class="publish-form">
+            <label for="title">Título del Proyecto:</label>
+            <input type="text" id="title" required placeholder="Ejemplo: Sistema de Control de Inventarios">
+            
+            <label for="category">Categoría:</label>
+            <select id="category">
+                <option value="tecnologia">Tecnología</option>
+                <option value="arte">Arte</option>
+                <option value="ciencias">Ciencias</option>
+            </select>
+
+            <label for="description">Descripción:</label>
+            <textarea id="description" rows="5" required placeholder="Describe brevemente tu proyecto..."></textarea>
+
+            <label for="requirements">Requisitos:</label>
+            <textarea id="requirements" rows="3" placeholder="¿Qué habilidades necesitas?"></textarea>
+
+            <button type="submit" class="btn">Publicar Proyecto</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Plataforma Colaborativa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

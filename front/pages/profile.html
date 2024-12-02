@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Usuario</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Proyectos Colaborativos</div>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="explore.html">Explorar Proyectos</a>
+            <a href="userprofile.html" class="active">Perfil</a>
+            <a href="post.html">Publicar Proyecto</a>
+        </nav>
+    </header>
+    <section class="profile">
+        <div class="profile-card">
+            <h2>Hola, Juan Pérez</h2>
+            <p>Categoría: Estudiante</p>
+            <p>Carrera: Ingeniería de Software</p>
+            <button class="btn">Editar Perfil</button>
+        </div>
+        
+        <div class="profile-section">
+            <h3>Proyectos Publicados</h3>
+            <ul class="project-list">
+                <li>
+                    <span>Desarrollo de App Móvil</span>
+                    <button class="btn edit" onclick="editProject('1')">Editar</button>
+                    <button class="btn delete" onclick="deleteProject('1')">Borrar</button>
+                </li>
+            </ul>
+        </div>
+        <div class="profile-section">
+            <h3>Colaboraciones Activas</h3>
+            <ul class="project-list">
+                <li>
+                    <span>Plataforma Educativa en Línea</span>
+                </li>
+                <li>
+                    <span>Diseño Gráfico para Sitios Web</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Plataforma Colaborativa. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../assets/js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+  }
+  
+  .container {
+    width: 350px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .website-title {
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fade-in 1s ease;
+  }
+  
+  .form-container {
+    position: relative;
+  }
+  
+  .form-toggle {
+    display: flex;
+    justify-content: center;
+    background: #f1f1f1;
+  }
+  
+  .form-toggle button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .form-toggle button:hover {
+    background: #ddd;
+  }
+  
+  .form {
+    padding: 20px;
+    display: none;
+    animation: fade-in 0.5s ease;
+  }
+  
+  .form.active {
+    display: block;
+  }
+  
+  form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background: #6e8efb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #5a77e0;
+  }
+  
+  /* Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

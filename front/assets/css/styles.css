@@ -1,0 +1,479 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header {
+    background: #6200ea;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    margin: 0 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.hero {
+    text-align: center;
+    background: linear-gradient(45deg, #6200ea, #3700b3);
+    color: #fff;
+    padding: 100px 20px;
+    animation: fadeIn 2s;
+}
+
+.hero .title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background: #03dac6;
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.cta-button:hover {
+    background: #018786;
+    color: #fff;
+}
+
+/* Explorar Section */
+.explorar {
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.explorar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card .btn {
+    padding: 10px 15px;
+    background: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    background: #3700b3;
+}
+
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Perfil */
+.profile {
+    padding: 50px 20px;
+}
+
+.profile-card {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Publicar Proyecto */
+.publish-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.publish-form input,
+.publish-form textarea,
+.publish-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Panel de Administrador */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.admin-table th {
+    background: #6200ea;
+    color: #fff;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar a {
+    padding: 10px 5px;
+    font-size: 14px; 
+}
+
+/* 2. Hero Section (sección principal) */
+.hero {
+    padding: 80px 15px;
+}
+
+.hero .title {
+    font-size: 1.8em; 
+}
+
+.hero .subtitle {
+    font-size: 1em;
+}
+
+.cta-button {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* 3. Sección de Cartas (Explorar Proyectos) */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    width: 100%; 
+}
+
+/* 4. Perfil del Usuario */
+.profile-card {
+    padding: 15px;
+    font-size: 14px;
+}
+
+.project-list li {
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+}
+
+/* 5. Formulario de Publicar Proyecto */
+.publish-form input,
+.publish-form textarea,
+.publish-form select {
+    font-size: 14px;
+    padding: 8px;
+}
+
+/* 6. Panel de Administrador */
+.admin-table th, .admin-table td {
+    font-size: 12px; 
+    padding: 8px;
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .profile-card {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero .title {
+        font-size: 2.5em; 
+    }
+
+    .hero .subtitle {
+        font-size: 1.2em;
+    }
+
+    .navbar a {
+        font-size: 16px; 
+    }
+
+    .publish-form input,
+    .publish-form textarea,
+    .publish-form select {
+        font-size: 16px;
+    }
+
+    .admin-table th, .admin-table td {
+        font-size: 14px;
+    }
+}
+
+/* Sección Explorar */
+.explorar {
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.explorar h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filters label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filters select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Tarjetas de Proyectos */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card .btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    background: #3700b3;
+}
+
+/* Proyecto - Detalles */
+.project-detail {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-detail h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #6200ea;
+    margin-bottom: 10px;
+}
+
+.project-detail .category,
+.project-detail .status {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.project-detail .category span,
+.project-detail .status span {
+    font-weight: bold;
+    color: #3700b3;
+}
+
+.project-detail .description,
+.project-detail .goals,
+.project-detail .requirements {
+    margin: 20px 0;
+}
+
+.project-detail h2 {
+    font-size: 1.8em;
+    color: #6200ea;
+    border-bottom: 2px solid #3700b3;
+    padding-bottom: 5px;
+}
+
+.project-detail p,
+.project-detail ul {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.project-detail ul {
+    padding-left: 20px;
+}
+
+.project-detail ul li {
+    margin: 10px 0;
+    list-style-type: disc;
+}
+
+.project-detail .actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.project-detail .actions .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.project-detail .actions .btn:hover {
+    background: #3700b3;
+}
