@@ -98,6 +98,6 @@ function checkAuthentication() {
   const token = localStorage.getItem('authToken');
   if (!token) {
     alert('Debes iniciar sesión para acceder a esta página.');
-    window.location.href = 'log.html'; // Redirigir al login
+    //window.location.href = 'log.html'; // Redirigir al login
   }
 }
