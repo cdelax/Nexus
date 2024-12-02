@@ -6,24 +6,24 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
   const password = e.target[1].value;
 
   try {
-      const response = await fetch('/api/auth/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password }),
-      });
+    const response = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
 
-      if (response.ok) {
-          const { token } = await response.json();
-          localStorage.setItem('authToken', token); // Guardar el token
-          alert('Inicio de sesión exitoso.');
-          window.location.href = 'home.html';  // Redirigir a la página principal
-      } else {
-          const error = await response.json();
-          alert(error.msg || 'Error en el inicio de sesión');
-      }
+    if (response.ok) {
+      const { token } = await response.json();
+      localStorage.setItem('authToken', token); // Guardar el token
+      alert('Inicio de sesión exitoso.');
+      window.location.href = 'home.html';  // Redirigir a la página principal
+    } else {
+      const error = await response.json();
+      alert(error.msg || 'Error en el inicio de sesión');
+    }
   } catch (err) {
-      console.error(err);
-      alert('Error al conectar con el servidor');
+    console.error(err);
+    alert('Error al conectar con el servidor');
   }
 });
 
@@ -36,22 +36,22 @@ document.getElementById('signup-form').addEventListener('submit', async (e) => {
   const password = e.target[2].value;
 
   try {
-      const response = await fetch('/api/auth/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: username, email, password }),
-      });
+    const response = await fetch('/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: username, email, password }),
+    });
 
-      if (response.ok) {
-          alert('Registro exitoso. Ahora puedes iniciar sesión.');
-          showLogin(); // Cambiar al formulario de login
-      } else {
-          const error = await response.json();
-          alert(error.msg || 'Error en el registro');
-      }
+    if (response.ok) {
+      alert('Registro exitoso. Ahora puedes iniciar sesión.');
+      showLogin(); // Cambiar al formulario de login
+    } else {
+      const error = await response.json();
+      alert(error.msg || 'Error en el registro');
+    }
   } catch (err) {
-      console.error(err);
-      alert('Error al conectar con el servidor');
+    console.error(err);
+    alert('Error al conectar con el servidor');
   }
 });
 
@@ -67,15 +67,6 @@ function showSignUp() {
   document.getElementById('login-form').classList.remove('active');
 }
 
-// Proteger rutas restringidas
-function checkAuthentication() {
-  const token = localStorage.getItem('authToken');
-  if (!token) {
-      alert('Debes iniciar sesión para acceder a esta página.');
-      window.location.href = 'log.html'; // Redirigir al login
-  }
-}
-
 // Cerrar sesión
 function logout() {
   localStorage.removeItem('authToken'); // Eliminar el token
@@ -87,9 +78,9 @@ function logout() {
 async function fetchWithAuth(url, options = {}) {
   const token = localStorage.getItem('authToken');
   if (!token) {
-      alert('No tienes permisos para esta acción.');
-      logout(); // Cerrar sesión automáticamente
-      return;
+    alert('No tienes permisos para esta acción.');
+    logout(); // Cerrar sesión automáticamente
+    return;
   }
 
   const headers = options.headers || {};
@@ -101,4 +92,12 @@ async function fetchWithAuth(url, options = {}) {
 // Verificar autenticación al cargar páginas protegidas
 if (window.location.pathname !== '/log.html') {
   window.onload = checkAuthentication;
+}
+
+function checkAuthentication() {
+  const token = localStorage.getItem('authToken');
+  if (!token) {
+    alert('Debes iniciar sesión para acceder a esta página.');
+    window.location.href = 'log.html'; // Redirigir al login
+  }
 }

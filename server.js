@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
+const jwt = require("jsonwebtoken");
 const connectDB = require("./back/src/config/database");
 const cors = require("cors");
 
